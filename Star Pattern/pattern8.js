@@ -6,16 +6,18 @@
 
 let n = 5;
 
-for (let i = 0; i < n; i++) {
+for (let i = 1; i <= n; i++) {
   let row = "";
-  let toggle = "1";
-  for (let j = 0; j <= i; j++) {
-    row = row + toggle;
-    if (toggle == 1) {
-      toggle = "0";
+  let toggle = true;
+  for (let j = 1; j <= i; j++) {
+    if (toggle) {
+      row += 1;
+      toggle = false;
     } else {
-      toggle = "1";
+      row += 0;
+      toggle = true;
     }
   }
+
   console.log(row);
 }

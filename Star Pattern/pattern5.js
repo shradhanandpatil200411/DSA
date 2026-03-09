@@ -6,11 +6,10 @@
 
 let n = 5;
 
-for (let i = 0; i < n; i++) {
+for (let i = n; i > 0; i--) {
   let row = "";
-  for (let j = 0; j < n - i; j++) {
-    row = row + (j + 1);
+  for (let j = 1; j <= i; j++) {
+    row += j + " ";
   }
-
   console.log(row);
 }
