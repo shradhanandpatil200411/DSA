@@ -16,7 +16,7 @@ function findIsStrong(num) {
   }
   return strong;
 }
-let num = 1456;
+let num = 145;
 let isStrong = findIsStrong(num);
 
 if (isStrong == num) console.log("Yes");
