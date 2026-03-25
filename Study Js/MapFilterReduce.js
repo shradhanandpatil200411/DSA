@@ -1,8 +1,6 @@
 // map , filter, reduce
 
-
 // custom map function
-
 Array.prototype.myMap = function (cb) {
   let arr = [];
   for (let i = 0; i < this.length; i++) {
@@ -78,7 +76,4 @@ let arr = [1, 2, 3, 4, 5];
 let sum = arr.myReducer((acc, curr) => acc + curr);
 
 console.log(sum);
-
-
-// The ability of function to access the variable or function which are lexically out of its scope this we know as closers  
 
