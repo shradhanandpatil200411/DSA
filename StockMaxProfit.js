@@ -10,21 +10,21 @@
 // Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 
 var maxProfit = function (prices) {
-  let minBuy = prices[0];
+  let minBuy = 0;
+  let maxSale = 0;
   let maxProfit = 0;
-
-  for (let j = 1; j < prices.length; j++) {
-    if (maxProfit < prices[j] - minBuy) {
-      maxProfit = prices[j] - minBuy;
+  for (let i = 1; i < prices.length; i++) {
+    if (prices[minBuy] > prices[i]) {
+      minBuy = i;
     }
-
-    if (minBuy > prices[j]) {
-      minBuy = prices[j];
+    if (maxProfit < prices[i] - minBuy) {
+      maxProfit = prices[i];
+      maxSale = i;
     }
   }
 
-  return maxProfit;
+  return [minBuy, maxSale];
 };
 
-const result = maxProfit([1, 2]);
+const result = maxProfit([1, 2, 10, 1, 9]);
 console.log(result);
