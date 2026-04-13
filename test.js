@@ -39,17 +39,17 @@ function myPromiseAll(promise) {
 
 // introduction.call(obj, "Nimap Infotech", 3);
 
-let num = 24683;
+// let num = 24683;
 
-function findOdd(num) {
-  let str = num.toString();
-  let count = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] % 2 !== 0) {
-      count++;
-    }
-  }
-  return count;
-}
+// function findOdd(num) {
+//   let str = num.toString();
+//   let count = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] % 2 !== 0) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
 
-console.log(findOdd(num));
+// console.log(findOdd(num));
