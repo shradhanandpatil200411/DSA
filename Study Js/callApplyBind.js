@@ -1,5 +1,5 @@
-function getDetails(age) {
-  console.log(`My name is ${this.name} and i am ${age} year old`);
+function getDetails() {
+  console.log(`My name is ${this.name} and i am ${this.age} year old`);
 }
 
 let user1 = {
@@ -10,6 +10,8 @@ let user2 = {
   name: "vinaya",
   age: 22,
 };
+
+getDetails.call(user1);
 
 // Call  Polyfill
 
@@ -52,5 +54,5 @@ Function.prototype.myBind = function (context = {}, ...args) {
   };
 };
 
-const data = getDetails.myBind(user1, 25);
-console.log(data());
+// const data = getDetails.myBind(user1, 25);
+// console.log(data());
